@@ -41,8 +41,10 @@ exports.default = function () {
   gulp.watch("src/css/*.css", minifyCSS);
   gulp.watch("src/js/*.js", transpileAndCompress);
   gulp.watch("src/index.html", copyHTML);
+  gulp.watch("src/image", copyImage);
   minifyCSS();
   transpileAndCompress();
   copyHTML();
+  copyImage();
   sync();
 };
